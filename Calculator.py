@@ -33,8 +33,10 @@ def calculator():
             break  # break the while loop if answer is no
 
 
-def add(first_number, second_number):
-    total = first_number + second_number
+def add(*args):
+    total = 0
+    for numbers in args:
+        total = total + numbers
     return total
 
 
