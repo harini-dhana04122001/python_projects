@@ -74,7 +74,7 @@ print("Output List using list comprehensions:", comprehension)"""
 
 
 # nested dictionary comprehension
-data = [
+"""data = [
     {
         'id': 1,
         'role': 'Front-end',
@@ -99,28 +99,63 @@ data = [
 data = {role: {d["id"]: d["name"] for d in [i for i in data if i["role"] == role]}
         for role in set((j["role"] for j in data))}
 
-print(data)
+print(data)"""
 
 
 # Example for generator comprehension
-# # def demo():
-# new = (value for value in reversed(range(1, 10, 2)))
-#         # yield value
-#
-# print(type(new))
-# for i in new:
-#     print(i)
+"""# def demo():
+new = (value for value in reversed(range(1, 10, 2)))
+        # yield value
 
+print(type(new))
+for i in new:
+    print(i)
+"""
 
 # list1 = [1,2,3,4,5]
 #
 # add = [value for value in list1 if value == 6]
 #
 # print(add)
-
+#
 # list = [[1,2,3],[1,2],[1],[1,2,3,4]]
 # for x,y,a in list:
 #     print(x,y)
-
+#
 # b = list,
 # print(type(b))
+
+"""
+This is a program to sort a string of list using list comprehension
+"""
+# number_of_element = int(input("Enter number of element you want : "))
+# list_of_string = [input("Enter the element : ") for string in range(number_of_element)]
+# print(list_of_string,"IS THE LIST WHICH IS CREATED")
+#
+# new_string = ["".join(sorted(string)) for string in list_of_string ]
+# new_element_string = [element for element in new_string]
+#
+# print(new_element_string, "IS THE SORTED STRING")
+
+
+"""
+This is a program example for dictionary comprehension
+"""
+employee_details = [{'name': 'sara', 'role': 'python developer'}]
+salary_details = [{'role_name': 'python developer', 'salary': 30000}]
+employee_salary = {}
+
+# def assign_salary_to_employee(employee_details, salary_details):
+#     for name, role in employee_details:
+#         for role_name, salary in salary_details:
+#             if employee_details[role] == salary_details[role_name]:
+#                 employee_salary = {employee_details[name], salary_details[salary]}
+#                 yield employee_salary
+
+
+employee_salary = {employee_details[0]['name']: salary_details[0]['salary']
+                   for role_name, salary in salary_details for name, role in employee_details
+                   if employee_details[0][role] == salary_details[0][role_name]}
+
+
+print(employee_salary)
