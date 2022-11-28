@@ -97,9 +97,71 @@
 # Using List comprehensions
 # for constructing output list
 
-input_list = [1, 2, 3, 4, 4, 5, 6, 7, 7]
+# input_list = [1, 2, 3, 4, 4, 5, 6, 7, 7]
+#
+# list_using_comp = [var for var in range(0,6,-1)]
+#
+# print("Output List using list comprehensions:",
+#       list_using_comp)
+"""
 
-list_using_comp = [var for var in range(0,6,-1)]
+"""
+# b = ('id', 'name', 'age')
+# a = [(1, 'ren', '12'), (2, 'ewn', '13'), (3, 'ewr', '14')]
+#
+#
+# def new():
+#     for element in a :
+#         yield dict(zip(b, element))
+#
+#
+# print(list(new()))
 
-print("Output List using list comprehensions:",
-      list_using_comp)
+
+x = "global"
+
+
+def foo():
+
+    global x
+    x = x * 2
+
+    print(x)
+
+
+foo()
+print(x)
+
+# x = "Python"
+#
+# print(x)
+#
+# # print(s)
+#
+# s = "Toppr"
+# s = "hello"
+# print(s)
+#
+# # foo()
+#
+# print(x)
+
+
+# local and non-local function
+def new(a):
+    a = a * 2
+    print(a)
+
+    def hello():
+        nonlocal a
+        a = a * 4
+        return a
+    print(a)   # returns 6 as the local keyword has not changed
+    print(hello())
+    print(a)   # returns 24 as the local keyword has not changed
+
+
+print(new(3))
+
+
+

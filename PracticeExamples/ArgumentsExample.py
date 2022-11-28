@@ -8,12 +8,12 @@ default argument, keyword argument, positional
 # Default argument examples
 # It is not possible to pass a non-default argument after a default argument but its possible to pass a
 # Default argument after non-default argument.
-def show_details(name, age=20):
+def show_details(name='harini', *, age):
     print("name of the employee is ", name, "and their age is ", age, "\n")
 
 
 show_details('Harini')
-show_details('Saira Begum', 21)    # output of age will be 21 as argument for age is given
+show_details(age=21)    # output of age will be 21 as argument for age is given
 
 
 # Positional and Keyword argument examples

@@ -45,7 +45,7 @@ def sub(first_number, second_number):
     return total
 
 
-def multiplication(first_number, second_number):
+def multiplication(first_number, second_number ):
     total = first_number * second_number
     return total
 
