@@ -164,4 +164,84 @@ def new(a):
 print(new(3))
 
 
+""" decorator code """
+# def validation(function):
+#     print("3")
+#
+#     def is_valid(*args):
+#         print("4")
+#         for i in args:
+#             print(type(i))
+#             if isinstance(i, int):
+#                 print("tested")
+#                 result = function(i)
+#                 return result
+#                 # return func
+#             else:
+#                 return "amount should be in integer"
+#     return is_valid
+#
+#
+# def calculate_total(function):
+#     print("5")
+#
+#     def total_calculation(*args):
+#         print("6")
+#         # function(*args)
+#
+#         def total():
+#             print("7")
+#             # totals = 0
+#             # for i in args:
+#             #     pass
+#             print(function.__name__)
+#             return function()
+#         return total
+#     return total_calculation(function)
+#
+#
+# def calculate_tax(function):
+#     print("8")
+#
+#     def tax_calculation(*args):
+#         print("9")
+#
+#         def tax():
+#             print("10")
+#             for i in args:
+#                 print(i)
+#                 new_tax = i * 0.25
+#             return function()
+#         return tax
+#     return tax_calculation(function)
+#
+#
+# @validation
+# def restaurant_bill_amount(*args):
+#     print("1")
+#
+#     @calculate_total
+#     @calculate_tax
+#     def bill_amount():
+#         print("2")
+#         for i in args:
+#             i = i + 100
+#         return i
+#     return bill_amount()
+#
+#
+# restaurant_bill_amount(1000, 200)
+
+a = dict(zip([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e']))
+
+print(a.items())
+print(list(a))  # gives only the list of keys
+print(len(a))  # gives length of item
+print(1 in a)
+print(a.keys())
+
+from collections import ChainMap
+
+b = ChainMap({1: 'a',2:'3'},{3:'b',2:'b'})
+print(b.keys())
 
